@@ -1,0 +1,51 @@
+is_global = true
+build_property.TargetFramework = net10.0
+build_property.TargetFrameworkIdentifier = .NETCoreApp
+build_property.TargetFrameworkVersion = v10.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ListaDeComprasWeb.WebApp
+build_property.RootNamespace = ListaDeComprasWeb.WebApp
+build_property.ProjectDir = C:\Users\thiag\Documents\Academia 2026\lista-de-compras-web\ListaDeComprasWeb.WebApp\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 9.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\thiag\Documents\Academia 2026\lista-de-compras-web\ListaDeComprasWeb.WebApp
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 10.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/thiag/Documents/Academia 2026/lista-de-compras-web/ListaDeComprasWeb.WebApp/ModuloCategoria/Apresentacao/Views/Categoria/Cadastrar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = TW9kdWxvQ2F0ZWdvcmlhXEFwcmVzZW50YWNhb1xWaWV3c1xDYXRlZ29yaWFcQ2FkYXN0cmFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thiag/Documents/Academia 2026/lista-de-compras-web/ListaDeComprasWeb.WebApp/ModuloCategoria/Apresentacao/Views/Categoria/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = TW9kdWxvQ2F0ZWdvcmlhXEFwcmVzZW50YWNhb1xWaWV3c1xDYXRlZ29yaWFcRWRpdGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thiag/Documents/Academia 2026/lista-de-compras-web/ListaDeComprasWeb.WebApp/ModuloCategoria/Apresentacao/Views/Categoria/Excluir.cshtml]
+build_metadata.AdditionalFiles.TargetPath = TW9kdWxvQ2F0ZWdvcmlhXEFwcmVzZW50YWNhb1xWaWV3c1xDYXRlZ29yaWFcRXhjbHVpci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thiag/Documents/Academia 2026/lista-de-compras-web/ListaDeComprasWeb.WebApp/ModuloCategoria/Apresentacao/Views/Categoria/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = TW9kdWxvQ2F0ZWdvcmlhXEFwcmVzZW50YWNhb1xWaWV3c1xDYXRlZ29yaWFcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thiag/Documents/Academia 2026/lista-de-compras-web/ListaDeComprasWeb.WebApp/ModuloCategoria/Compartilhado/Apresentacao/Views/_layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = TW9kdWxvQ2F0ZWdvcmlhXENvbXBhcnRpbGhhZG9cQXByZXNlbnRhY2FvXFZpZXdzXF9sYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thiag/Documents/Academia 2026/lista-de-compras-web/ListaDeComprasWeb.WebApp/ModuloCategoria/Compartilhado/Apresentacao/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = TW9kdWxvQ2F0ZWdvcmlhXENvbXBhcnRpbGhhZG9cQXByZXNlbnRhY2FvXFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thiag/Documents/Academia 2026/lista-de-compras-web/ListaDeComprasWeb.WebApp/ModuloCategoria/Compartilhado/Apresentacao/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = TW9kdWxvQ2F0ZWdvcmlhXENvbXBhcnRpbGhhZG9cQXByZXNlbnRhY2FvXF9WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

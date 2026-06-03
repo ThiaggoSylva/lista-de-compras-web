@@ -1,0 +1,83 @@
+using ListaDeComprasWeb.Compartilhado;
+
+using ListaDeComprasWeb.ModuloCategoria.Aplicacao.Servicos;
+using ListaDeComprasWeb.ModuloCategoria.Dominio;
+using ListaDeComprasWeb.ModuloCategoria.Infraestrutura;
+
+var builder = WebApplication.CreateBuilder(args);
+
+#region ContextoJson
+
+ContextoJson contexto = new();
+
+contexto.Carregar();
+
+builder.Services.AddSingleton(contexto);
+
+#endregion
+
+#region MVC
+
+builder.Services
+    .AddControllersWithViews()
+    .AddRazorOptions(options =>
+    {
+        options.ViewLocationFormats.Clear();
+
+        options.ViewLocationFormats.Add(
+            "/Modulo{1}/Apresentacao/Views/{0}.cshtml");
+
+        options.ViewLocationFormats.Add(
+            "/Modulo{1}/Apresentacao/Views/{1}/{0}.cshtml");
+
+        options.ViewLocationFormats.Add(
+            "/Compartilhado/Apresentacao/Views/{0}.cshtml");
+
+        options.ViewLocationFormats.Add(
+            "/Compartilhado/Apresentacao/Views/Shared/{0}.cshtml");
+    });
+
+#endregion
+
+#region AutoMapper
+
+builder.Services.AddAutoMapper(typeof(Program));
+
+#endregion
+
+#region Categoria
+
+builder.Services.AddScoped<IRepositorioCategoria,
+                           RepositorioCategoriaEmArquivo>();
+
+builder.Services.AddScoped<IServicoCategoria,
+                           ServicoCategoria>();
+
+#endregion
+
+var app = builder.Build();
+
+#region Pipeline
+
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Home/Error");
+
+    app.UseHsts();
+}
+
+app.UseHttpsRedirection();
+
+app.UseStaticFiles();
+
+app.UseRouting();
+
+app.UseAuthorization();
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
+
+#endregion
+
+app.Run();

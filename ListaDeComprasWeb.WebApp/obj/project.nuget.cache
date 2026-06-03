@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "ClA+vnUooZo=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\thiag\\Documents\\Academia 2026\\lista-de-compras-web\\ListaDeComprasWeb.WebApp\\ListaDeComprasWeb.WebApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\thiag\\.nuget\\packages\\automapper\\16.1.1\\automapper.16.1.1.nupkg.sha512",
+    "C:\\Users\\thiag\\.nuget\\packages\\microsoft.identitymodel.abstractions\\8.14.0\\microsoft.identitymodel.abstractions.8.14.0.nupkg.sha512",
+    "C:\\Users\\thiag\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\8.14.0\\microsoft.identitymodel.jsonwebtokens.8.14.0.nupkg.sha512",
+    "C:\\Users\\thiag\\.nuget\\packages\\microsoft.identitymodel.logging\\8.14.0\\microsoft.identitymodel.logging.8.14.0.nupkg.sha512",
+    "C:\\Users\\thiag\\.nuget\\packages\\microsoft.identitymodel.tokens\\8.14.0\\microsoft.identitymodel.tokens.8.14.0.nupkg.sha512"
+  ],
+  "logs": []
+}
