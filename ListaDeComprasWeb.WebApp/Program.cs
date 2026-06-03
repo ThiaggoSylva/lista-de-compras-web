@@ -6,7 +6,7 @@ using ListaDeComprasWeb.ModuloCategoria.Infraestrutura;
 
 var builder = WebApplication.CreateBuilder(args);
 
-#region ContextoJson
+#region Contexto Json
 
 ContextoJson contexto = new();
 
@@ -24,11 +24,15 @@ builder.Services
     {
         options.ViewLocationFormats.Clear();
 
-        options.ViewLocationFormats.Add(
-            "/Modulo{1}/Apresentacao/Views/{0}.cshtml");
+        // Views dos módulos
 
         options.ViewLocationFormats.Add(
             "/Modulo{1}/Apresentacao/Views/{1}/{0}.cshtml");
+
+        options.ViewLocationFormats.Add(
+            "/Modulo{1}/Apresentacao/Views/{0}.cshtml");
+
+        // Compartilhado
 
         options.ViewLocationFormats.Add(
             "/Compartilhado/Apresentacao/Views/{0}.cshtml");
@@ -41,7 +45,7 @@ builder.Services
 
 #region AutoMapper
 
-builder.Services.AddAutoMapper(typeof(Program));
+builder.Services.AddAutoMapper(_ => { }, typeof(Program).Assembly);
 
 #endregion
 

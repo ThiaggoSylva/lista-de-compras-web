@@ -4,9 +4,13 @@ namespace ListaDeComprasWeb.ModuloCategoria.Dominio;
 
 public class Categoria : EntidadeBase<Categoria>
 {
-    public string Nome { get; private set; }
+    public string Nome { get; set; }
 
-    public string Cor { get; private set; }
+    public string Cor { get; set; }
+
+    public Categoria()
+    {
+    }
 
     public Categoria(
         string nome,

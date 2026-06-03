@@ -1,8 +1,7 @@
 using ListaDeComprasWeb.Compartilhado;
 using ListaDeComprasWeb.ModuloCategoria.Dominio;
-using ListaDeComprasWeb.WebApp.ModuloCategoria.Compartilhado;
 
-namespace ListaDeComprasWeb.WebApp.ModuloCategoria.Infraestrutura;
+namespace ListaDeComprasWeb.ModuloCategoria.Infraestrutura;
 
 public class RepositorioCategoriaEmArquivo
     : RepositorioBaseEmArquivo<Categoria>,
@@ -16,20 +15,30 @@ public class RepositorioCategoriaEmArquivo
 
     protected override List<Categoria> ObterRegistros()
     {
-        return contexto.Categorias;
+        return contexto.Dados.Categorias;
     }
 
     public bool ExisteNome(string nome)
     {
-        return contexto.Categorias
-            .Any(x =>
-                x.Nome.Equals(
-                    nome,
-                    StringComparison.OrdinalIgnoreCase));
+        return contexto.Dados.Categorias.Any(c =>
+            c.Nome.Equals(
+                nome,
+                StringComparison.OrdinalIgnoreCase));
+    }
+
+    public bool ExisteNome(Guid id, string nome)
+    {
+        return contexto.Dados.Categorias.Any(c =>
+            c.Id != id &&
+            c.Nome.Equals(
+                nome,
+                StringComparison.OrdinalIgnoreCase));
     }
 
     public bool PossuiProdutos(Guid categoriaId)
     {
+        // Implementaremos quando o módulo Produto existir
+
         return false;
     }
 }
