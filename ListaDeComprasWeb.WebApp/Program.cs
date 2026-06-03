@@ -22,23 +22,14 @@ builder.Services
     .AddControllersWithViews()
     .AddRazorOptions(options =>
     {
-        options.ViewLocationFormats.Clear();
-
-        // Views dos módulos
-
         options.ViewLocationFormats.Add(
             "/Modulo{1}/Apresentacao/Views/{1}/{0}.cshtml");
 
         options.ViewLocationFormats.Add(
             "/Modulo{1}/Apresentacao/Views/{0}.cshtml");
 
-        // Compartilhado
-
         options.ViewLocationFormats.Add(
             "/Compartilhado/Apresentacao/Views/{0}.cshtml");
-
-        options.ViewLocationFormats.Add(
-            "/Compartilhado/Apresentacao/Views/Shared/{0}.cshtml");
     });
 
 #endregion
@@ -80,7 +71,7 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Categoria}/{action=Index}/{id?}");
 
 #endregion
 

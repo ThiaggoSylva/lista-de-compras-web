@@ -38,8 +38,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = TW9kdWxvQ2F0ZWdvcmlhXEFwcmVzZW50YWNhb1xWaWV3c1xDYXRlZ29yaWFcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/thiag/Documents/Academia 2026/lista-de-compras-web/ListaDeComprasWeb.WebApp/ModuloCategoria/Compartilhado/Apresentacao/Views/_layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = TW9kdWxvQ2F0ZWdvcmlhXENvbXBhcnRpbGhhZG9cQXByZXNlbnRhY2FvXFZpZXdzXF9sYXlvdXQuY3NodG1s
+[C:/Users/thiag/Documents/Academia 2026/lista-de-compras-web/ListaDeComprasWeb.WebApp/ModuloCategoria/Apresentacao/Views/Categoria/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = TW9kdWxvQ2F0ZWdvcmlhXEFwcmVzZW50YWNhb1xWaWV3c1xDYXRlZ29yaWFcX0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thiag/Documents/Academia 2026/lista-de-compras-web/ListaDeComprasWeb.WebApp/ModuloCategoria/Compartilhado/Apresentacao/Views/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = TW9kdWxvQ2F0ZWdvcmlhXENvbXBhcnRpbGhhZG9cQXByZXNlbnRhY2FvXFZpZXdzXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/thiag/Documents/Academia 2026/lista-de-compras-web/ListaDeComprasWeb.WebApp/ModuloCategoria/Compartilhado/Apresentacao/Views/_ViewStart.cshtml]
@@ -48,4 +52,12 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/thiag/Documents/Academia 2026/lista-de-compras-web/ListaDeComprasWeb.WebApp/ModuloCategoria/Compartilhado/Apresentacao/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = TW9kdWxvQ2F0ZWdvcmlhXENvbXBhcnRpbGhhZG9cQXByZXNlbnRhY2FvXF9WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thiag/Documents/Academia 2026/lista-de-compras-web/ListaDeComprasWeb.WebApp/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = X1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thiag/Documents/Academia 2026/lista-de-compras-web/ListaDeComprasWeb.WebApp/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = X1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
