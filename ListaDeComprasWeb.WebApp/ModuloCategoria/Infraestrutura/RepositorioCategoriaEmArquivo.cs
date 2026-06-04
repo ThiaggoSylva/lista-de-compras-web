@@ -37,8 +37,7 @@ public class RepositorioCategoriaEmArquivo
 
     public bool PossuiProdutos(Guid categoriaId)
     {
-        // Implementaremos quando o módulo Produto existir
-
-        return false;
+        return contexto.Dados.Produtos
+        .Any(x => x.CategoriaId == categoriaId);
     }
 }
