@@ -1,5 +1,4 @@
 using ListaDeComprasWeb.Compartilhado;
-
 using ListaDeComprasWeb.ModuloCategoria.Aplicacao.Servicos;
 using ListaDeComprasWeb.ModuloCategoria.Dominio;
 using ListaDeComprasWeb.ModuloCategoria.Infraestrutura;
@@ -36,7 +35,8 @@ builder.Services
 
 #region AutoMapper
 
-builder.Services.AddAutoMapper(_ => { }, typeof(Program).Assembly);
+builder.Services.AddAutoMapper(
+    AppDomain.CurrentDomain.GetAssemblies());
 
 #endregion
 
@@ -76,3 +76,4 @@ app.MapControllerRoute(
 #endregion
 
 app.Run();
+

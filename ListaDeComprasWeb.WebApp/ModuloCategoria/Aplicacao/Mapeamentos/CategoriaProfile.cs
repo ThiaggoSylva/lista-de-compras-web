@@ -1,8 +1,8 @@
 using AutoMapper;
 
-using ListaDeComprasWeb.ModuloCategoria.Dominio;
 using ListaDeComprasWeb.ModuloCategoria.Aplicacao.DTOs;
 using ListaDeComprasWeb.ModuloCategoria.Apresentacao.Models;
+using ListaDeComprasWeb.ModuloCategoria.Dominio;
 
 namespace ListaDeComprasWeb.ModuloCategoria.Aplicacao.Mapeamentos;
 
@@ -10,25 +10,38 @@ public class CategoriaProfile : Profile
 {
     public CategoriaProfile()
     {
+        #region Domínio -> DTO
+
+        CreateMap<Categoria, CategoriaDto>();
+
+        #endregion
+
+        #region DTO -> Domínio
+
+        CreateMap<CadastrarCategoriaDto, Categoria>();
+
+        CreateMap<EditarCategoriaDto, Categoria>();
+
+        #endregion
+
+        #region ViewModel -> DTO
+
         CreateMap<CadastrarCategoriaViewModel,
                   CadastrarCategoriaDto>();
 
         CreateMap<EditarCategoriaViewModel,
                   EditarCategoriaDto>();
 
-        CreateMap<CadastrarCategoriaDto,
-                  Categoria>();
+        #endregion
 
-        CreateMap<EditarCategoriaDto,
-                  Categoria>();
+        #region DTO -> ViewModel
 
-        CreateMap<Categoria,
-                  CategoriaDto>();
+        CreateMap<CategoriaDto,
+                  EditarCategoriaViewModel>();
 
         CreateMap<CategoriaDto,
                   VisualizarCategoriaViewModel>();
 
-        CreateMap<CategoriaDto,
-                  EditarCategoriaViewModel>();
+        #endregion
     }
 }

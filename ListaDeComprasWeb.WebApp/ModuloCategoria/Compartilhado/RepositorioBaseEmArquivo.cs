@@ -1,4 +1,6 @@
-namespace ListaDeComprasWeb.Compartilhado;
+using ListaDeComprasWeb.Compartilhado;
+
+namespace ListaDeComprasWeb.ModuloCategoria.Compartilhado;
 
 public abstract class RepositorioBaseEmArquivo<T>
     : IRepositorioBase<T>
@@ -6,7 +8,8 @@ public abstract class RepositorioBaseEmArquivo<T>
 {
     protected readonly ContextoJson contexto;
 
-    protected RepositorioBaseEmArquivo(ContextoJson contexto)
+    protected RepositorioBaseEmArquivo(
+        ContextoJson contexto)
     {
         this.contexto = contexto;
     }
@@ -20,25 +23,22 @@ public abstract class RepositorioBaseEmArquivo<T>
         contexto.Salvar();
     }
 
-    public virtual void Editar(Guid id, T registroEditado)
+    public virtual void Editar(T registroEditado)
     {
-        T? registro = SelecionarPorId(id);
+        T? registroSelecionado =
+            SelecionarPorId(registroEditado.Id);
 
-        if (registro is null)
+        if (registroSelecionado is null)
             return;
 
-        registro.AtualizarRegistro(registroEditado);
+        registroSelecionado.AtualizarRegistro(
+            registroEditado);
 
         contexto.Salvar();
     }
 
-    public virtual void Excluir(Guid id)
+    public virtual void Excluir(T registro)
     {
-        T? registro = SelecionarPorId(id);
-
-        if (registro is null)
-            return;
-
         ObterRegistros().Remove(registro);
 
         contexto.Salvar();
@@ -52,8 +52,6 @@ public abstract class RepositorioBaseEmArquivo<T>
 
     public virtual List<T> SelecionarTodos()
     {
-        return ObterRegistros()
-            .OrderBy(x => x.Id)
-            .ToList();
+        return ObterRegistros();
     }
 }

@@ -1,19 +1,22 @@
-using ListaDeComprasWeb.Compartilhado;
+using FluentResults;
+
 using ListaDeComprasWeb.ModuloCategoria.Aplicacao.DTOs;
 
 namespace ListaDeComprasWeb.ModuloCategoria.Aplicacao.Servicos;
 
 public interface IServicoCategoria
 {
-    Resultado<CategoriaDto> Cadastrar(
+    Result Cadastrar(
         CadastrarCategoriaDto dto);
 
-    Resultado<CategoriaDto> Editar(
+    Result Editar(
         EditarCategoriaDto dto);
 
-    Resultado Excluir(Guid id);
+    Result Excluir(
+        Guid id);
 
-    CategoriaDto? SelecionarPorId(Guid id);
+    CategoriaDto? SelecionarPorId(
+        Guid id);
 
     List<CategoriaDto> SelecionarTodos();
 }

@@ -1,4 +1,5 @@
 using ListaDeComprasWeb.Compartilhado;
+using ListaDeComprasWeb.ModuloCategoria.Compartilhado;
 using ListaDeComprasWeb.ModuloCategoria.Dominio;
 
 namespace ListaDeComprasWeb.ModuloCategoria.Infraestrutura;
@@ -20,24 +21,27 @@ public class RepositorioCategoriaEmArquivo
 
     public bool ExisteNome(string nome)
     {
-        return contexto.Dados.Categorias.Any(c =>
-            c.Nome.Equals(
+        return contexto.Dados.Categorias
+            .Any(c => c.Nome.Equals(
                 nome,
                 StringComparison.OrdinalIgnoreCase));
     }
 
-    public bool ExisteNome(Guid id, string nome)
+    public bool ExisteNome(
+        Guid id,
+        string nome)
     {
-        return contexto.Dados.Categorias.Any(c =>
-            c.Id != id &&
-            c.Nome.Equals(
-                nome,
-                StringComparison.OrdinalIgnoreCase));
+        return contexto.Dados.Categorias
+            .Any(c =>
+                c.Id != id &&
+                c.Nome.Equals(
+                    nome,
+                    StringComparison.OrdinalIgnoreCase));
     }
 
     public bool PossuiProdutos(Guid categoriaId)
     {
         return contexto.Dados.Produtos
-        .Any(x => x.CategoriaId == categoriaId);
+            .Any(p => p.CategoriaId == categoriaId);
     }
 }

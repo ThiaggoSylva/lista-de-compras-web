@@ -1,4 +1,5 @@
 using System.Text.Json;
+using ListaDeComprasWeb.ModuloProduto.Dominio;
 
 namespace ListaDeComprasWeb.Compartilhado;
 

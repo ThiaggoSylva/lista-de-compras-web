@@ -5,11 +5,11 @@ namespace ListaDeComprasWeb.ModuloProduto.Dominio;
 public interface IRepositorioProduto
     : IRepositorioBase<Produto>
 {
-    bool ExisteNome(
+    bool ExisteProdutoNaCategoria(
         string nome,
         Guid categoriaId);
 
-    bool ExisteNome(
+    bool ExisteProdutoNaCategoria(
         Guid id,
         string nome,
         Guid categoriaId);

@@ -1,12 +1,10 @@
-namespace ListaDeComprasWeb.Compartilhado;
-
 public interface IRepositorioBase<T>
 {
     void Cadastrar(T registro);
 
-    void Editar(Guid id, T registroEditado);
+    void Editar(T registroEditado);
 
-    void Excluir(Guid id);
+    void Excluir(T registro);
 
     T? SelecionarPorId(Guid id);
 

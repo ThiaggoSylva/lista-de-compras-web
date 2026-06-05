@@ -1,10 +1,9 @@
 using AutoMapper;
 
-using ListaDeComprasWeb.Compartilhado;
-
-using ListaDeComprasWeb.ModuloCategoria.Dominio;
+using FluentResults;
 
 using ListaDeComprasWeb.ModuloCategoria.Aplicacao.DTOs;
+using ListaDeComprasWeb.ModuloCategoria.Dominio;
 
 namespace ListaDeComprasWeb.ModuloCategoria.Aplicacao.Servicos;
 
@@ -22,93 +21,93 @@ public class ServicoCategoria : IServicoCategoria
         this.mapper = mapper;
     }
 
-    public Resultado<CategoriaDto> Cadastrar(
+    public Result Cadastrar(
         CadastrarCategoriaDto dto)
     {
+        if (string.IsNullOrWhiteSpace(dto.Nome))
+            return Result.Fail(
+                "O nome da categoria é obrigatório.");
+
+        if (dto.Nome.Length > 50)
+            return Result.Fail(
+                "O nome deve possuir no máximo 50 caracteres.");
+
         if (repositorioCategoria.ExisteNome(dto.Nome))
-        {
-            return Resultado<CategoriaDto>.Falha(
-                "Já existe uma categoria com este nome.");
-        }
+            return Result.Fail(
+                "Já existe uma categoria cadastrada com este nome.");
 
         Categoria categoria =
             mapper.Map<Categoria>(dto);
 
         repositorioCategoria.Cadastrar(categoria);
 
-        CategoriaDto categoriaDto =
-            mapper.Map<CategoriaDto>(categoria);
-
-        return Resultado<CategoriaDto>.Ok(
-            categoriaDto);
+        return Result.Ok();
     }
 
-    public Resultado<CategoriaDto> Editar(
+    public Result Editar(
         EditarCategoriaDto dto)
     {
-        Categoria? categoria =
+        Categoria? categoriaSelecionada =
             repositorioCategoria.SelecionarPorId(dto.Id);
 
-        if (categoria is null)
-        {
-            return Resultado<CategoriaDto>.Falha(
+        if (categoriaSelecionada is null)
+            return Result.Fail(
                 "Categoria não encontrada.");
-        }
+
+        if (string.IsNullOrWhiteSpace(dto.Nome))
+            return Result.Fail(
+                "O nome da categoria é obrigatório.");
+
+        if (dto.Nome.Length > 50)
+            return Result.Fail(
+                "O nome deve possuir no máximo 50 caracteres.");
 
         if (repositorioCategoria.ExisteNome(
-                dto.Id,
-                dto.Nome))
+            dto.Id,
+            dto.Nome))
         {
-            return Resultado<CategoriaDto>.Falha(
-                "Já existe uma categoria com este nome.");
+            return Result.Fail(
+                "Já existe uma categoria cadastrada com este nome.");
         }
 
         Categoria categoriaEditada =
             mapper.Map<Categoria>(dto);
 
         repositorioCategoria.Editar(
-            dto.Id,
             categoriaEditada);
 
-        CategoriaDto categoriaDto =
-            mapper.Map<CategoriaDto>(
-                categoriaEditada);
-
-        return Resultado<CategoriaDto>.Ok(
-            categoriaDto);
+        return Result.Ok();
     }
 
-    public Resultado Excluir(Guid id)
+    public Result Excluir(Guid id)
     {
-        Categoria? categoria =
+        Categoria? categoriaSelecionada =
             repositorioCategoria.SelecionarPorId(id);
 
-        if (categoria is null)
-        {
-            return Resultado.Falha(
+        if (categoriaSelecionada is null)
+            return Result.Fail(
                 "Categoria não encontrada.");
-        }
 
         if (repositorioCategoria.PossuiProdutos(id))
-        {
-            return Resultado.Falha(
+            return Result.Fail(
                 "Não é possível excluir uma categoria que possui produtos vinculados.");
-        }
 
-        repositorioCategoria.Excluir(id);
+        repositorioCategoria.Excluir(
+            categoriaSelecionada);
 
-        return Resultado.Ok();
+        return Result.Ok();
     }
 
     public CategoriaDto? SelecionarPorId(Guid id)
     {
-        Categoria? categoria =
+        Categoria? categoriaSelecionada =
             repositorioCategoria.SelecionarPorId(id);
 
-        if (categoria is null)
+        if (categoriaSelecionada is null)
             return null;
 
-        return mapper.Map<CategoriaDto>(categoria);
+        return mapper.Map<CategoriaDto>(
+            categoriaSelecionada);
     }
 
     public List<CategoriaDto> SelecionarTodos()

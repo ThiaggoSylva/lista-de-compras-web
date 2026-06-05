@@ -4,31 +4,13 @@ namespace ListaDeComprasWeb.ModuloProduto.Dominio;
 
 public class Produto : EntidadeBase<Produto>
 {
-    public string Nome { get; set; }
+    public string Nome { get; set; } = string.Empty;
 
     public Guid CategoriaId { get; set; }
 
-    public string UnidadeMedida { get; set; }
+    public string UnidadeMedida { get; set; } = string.Empty;
 
-    public decimal PrecoAproximado { get; set; }
-
-    public Produto()
-    {
-    }
-
-    public Produto(
-        string nome,
-        Guid categoriaId,
-        string unidadeMedida,
-        decimal precoAproximado)
-    {
-        Id = Guid.NewGuid();
-
-        Nome = nome;
-        CategoriaId = categoriaId;
-        UnidadeMedida = unidadeMedida;
-        PrecoAproximado = precoAproximado;
-    }
+    public decimal Preco { get; set; }
 
     public override void AtualizarRegistro(
         Produto registroEditado)
@@ -36,6 +18,6 @@ public class Produto : EntidadeBase<Produto>
         Nome = registroEditado.Nome;
         CategoriaId = registroEditado.CategoriaId;
         UnidadeMedida = registroEditado.UnidadeMedida;
-        PrecoAproximado = registroEditado.PrecoAproximado;
+        Preco = registroEditado.Preco;
     }
 }
