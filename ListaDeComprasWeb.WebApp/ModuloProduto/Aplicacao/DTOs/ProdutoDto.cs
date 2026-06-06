@@ -4,6 +4,7 @@ public record ProdutoDto(
     Guid Id,
     string Nome,
     Guid CategoriaId,
+    string NomeCategoria,
     string UnidadeMedida,
     decimal Preco
 );

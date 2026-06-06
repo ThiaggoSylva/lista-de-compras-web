@@ -4,21 +4,25 @@ using FluentResults;
 
 using ListaDeComprasWeb.ModuloProduto.Aplicacao.DTOs;
 using ListaDeComprasWeb.ModuloProduto.Dominio;
+using ListaDeComprasWeb.ModuloCategoria.Dominio;
 
 namespace ListaDeComprasWeb.ModuloProduto.Aplicacao.Servicos;
 
 public class ServicoProduto : IServicoProduto
 {
     private readonly IRepositorioProduto repositorioProduto;
+    private readonly IRepositorioCategoria repositorioCategoria;
 
     private readonly IMapper mapper;
 
     public ServicoProduto(
-        IRepositorioProduto repositorioProduto,
-        IMapper mapper)
+    IRepositorioProduto repositorioProduto,
+    IRepositorioCategoria repositorioCategoria,
+    IMapper mapper)
     {
-        this.repositorioProduto = repositorioProduto;
-        this.mapper = mapper;
+    this.repositorioProduto = repositorioProduto;
+    this.repositorioCategoria = repositorioCategoria;
+    this.mapper = mapper;
     }
 
     public Result Cadastrar(
@@ -130,21 +134,53 @@ public class ServicoProduto : IServicoProduto
 
     public ProdutoDto? SelecionarPorId(Guid id)
     {
-        Produto? produto =
-            repositorioProduto.SelecionarPorId(id);
+    Produto? produto =
+        repositorioProduto.SelecionarPorId(id);
 
-        if (produto is null)
-            return null;
+    if (produto is null)
+        return null;
 
-        return mapper.Map<ProdutoDto>(produto);
+    string nomeCategoria =
+        repositorioCategoria
+            .SelecionarPorId(produto.CategoriaId)?
+            .Nome ?? string.Empty;
+
+    return new ProdutoDto(
+        produto.Id,
+        produto.Nome,
+        produto.CategoriaId,
+        nomeCategoria,
+        produto.UnidadeMedida,
+        produto.Preco
+    );
     }
 
     public List<ProdutoDto> SelecionarTodos()
     {
-        List<Produto> produtos =
-            repositorioProduto.SelecionarTodos();
+    List<Produto> produtos =
+        repositorioProduto.SelecionarTodos();
 
-        return mapper.Map<List<ProdutoDto>>(
-            produtos);
+    List<ProdutoDto> produtosDto = [];
+
+    foreach (Produto produto in produtos)
+    {
+        string nomeCategoria =
+            repositorioCategoria
+                .SelecionarPorId(produto.CategoriaId)?
+                .Nome ?? string.Empty;
+
+        produtosDto.Add(
+            new ProdutoDto(
+                produto.Id,
+                produto.Nome,
+                produto.CategoriaId,
+                nomeCategoria,
+                produto.UnidadeMedida,
+                produto.Preco
+            )
+        );
+    }
+
+        return produtosDto;
     }
 }

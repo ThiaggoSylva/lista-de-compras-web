@@ -10,12 +10,7 @@ public class ProdutoProfile : Profile
 {
     public ProdutoProfile()
     {
-        #region Domínio -> DTO
-
-        CreateMap<Produto, ProdutoDto>();
-
-        #endregion
-
+    
         #region DTO -> Domínio
 
         CreateMap<CadastrarProdutoDto, Produto>();

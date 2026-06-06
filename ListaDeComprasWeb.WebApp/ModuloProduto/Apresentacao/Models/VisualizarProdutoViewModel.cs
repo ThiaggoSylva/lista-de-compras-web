@@ -6,7 +6,7 @@ public class VisualizarProdutoViewModel
 
     public string Nome { get; set; } = string.Empty;
 
-    public string Categoria { get; set; } = string.Empty;
+    public string NomeCategoria { get; set; } = string.Empty;
 
     public string UnidadeMedida { get; set; } = string.Empty;
 
