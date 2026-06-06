@@ -2,6 +2,8 @@ using ListaDeComprasWeb.Compartilhado;
 using ListaDeComprasWeb.ModuloCategoria.Aplicacao.Servicos;
 using ListaDeComprasWeb.ModuloCategoria.Dominio;
 using ListaDeComprasWeb.ModuloCategoria.Infraestrutura;
+using ListaDeComprasWeb.ModuloProduto.Dominio;
+using ListaDeComprasWeb.ModuloProduto.Infraestrutura;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -47,6 +49,9 @@ builder.Services.AddScoped<IRepositorioCategoria,
 
 builder.Services.AddScoped<IServicoCategoria,
                            ServicoCategoria>();
+
+builder.Services.AddScoped<IRepositorioProduto,
+                           RepositorioProdutoEmArquivo>();
 
 #endregion
 
