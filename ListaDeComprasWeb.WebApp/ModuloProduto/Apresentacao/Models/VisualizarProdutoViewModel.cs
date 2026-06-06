@@ -10,5 +10,5 @@ public class VisualizarProdutoViewModel
 
     public string UnidadeMedida { get; set; } = string.Empty;
 
-    public decimal PrecoAproximado { get; set; }
+    public decimal Preco { get; set; }
 }

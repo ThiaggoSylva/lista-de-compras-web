@@ -7,19 +7,21 @@ public class EditarProdutoViewModel
 {
     public Guid Id { get; set; }
 
-    [Required]
-    [StringLength(100, MinimumLength = 2)]
+    [Required(ErrorMessage = "O nome é obrigatório.")]
+    [MinLength(2)]
+    [MaxLength(100)]
     public string Nome { get; set; } = string.Empty;
 
-    [Required]
+    [Required(ErrorMessage = "A categoria é obrigatória.")]
     public Guid CategoriaId { get; set; }
 
-    [Required]
+    [Required(ErrorMessage = "A unidade de medida é obrigatória.")]
     public string UnidadeMedida { get; set; } = string.Empty;
 
-    [Required]
-    [Range(0.01, 999999)]
+    [Required(ErrorMessage = "O preço é obrigatório.")]
+    [Range(0.01, double.MaxValue)]
     public decimal PrecoAproximado { get; set; }
 
-    public List<SelectListItem> Categorias { get; set; } = [];
+    public List<SelectListItem> Categorias { get; set; }
+        = [];
 }
