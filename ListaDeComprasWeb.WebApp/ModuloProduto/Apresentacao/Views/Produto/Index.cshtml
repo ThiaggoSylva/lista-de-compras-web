@@ -1,0 +1,89 @@
+@using ListaDeComprasWeb.ModuloProduto.Apresentacao.Models
+
+@model List<VisualizarProdutoViewModel>
+
+@{
+    ViewBag.Titulo = "Produtos";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>@ViewBag.Titulo</h2>
+
+    <a asp-action="Cadastrar"
+       class="btn btn-primary">
+        Novo Produto
+    </a>
+</div>
+
+@if (TempData["Sucesso"] is not null)
+{
+    <div class="alert alert-success">
+        @TempData["Sucesso"]
+    </div>
+}
+
+@if (TempData["Erro"] is not null)
+{
+    <div class="alert alert-danger">
+        @TempData["Erro"]
+    </div>
+}
+
+<div class="card shadow-sm">
+    <div class="card-body">
+
+        <div class="table-responsive">
+
+            <table class="table table-hover align-middle">
+
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Categoria</th>
+                        <th>Unidade</th>
+                        <th>Preço</th>
+                        <th width="180">Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    @foreach (var produto in Model)
+                    {
+                        <tr>
+                            <td>@produto.Nome</td>
+
+                            <td>@produto.NomeCategoria</td>
+
+                            <td>@produto.UnidadeMedida</td>
+
+                            <td>
+                                @produto.Preco.ToString("C")
+                            </td>
+
+                            <td>
+
+                                <a asp-action="Editar"
+                                   asp-route-id="@produto.Id"
+                                   class="btn btn-sm btn-warning">
+                                    Editar
+                                </a>
+
+                                <a asp-action="Excluir"
+                                   asp-route-id="@produto.Id"
+                                   class="btn btn-sm btn-danger">
+                                    Excluir
+                                </a>
+
+                            </td>
+                        </tr>
+                    }
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+</div>

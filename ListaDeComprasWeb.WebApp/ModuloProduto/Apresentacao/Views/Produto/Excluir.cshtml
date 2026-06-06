@@ -1,0 +1,79 @@
+@using ListaDeComprasWeb.ModuloProduto.Apresentacao.Models
+
+@model VisualizarProdutoViewModel
+
+@{
+    ViewBag.Titulo = "Excluir Produto";
+}
+
+<div class="card shadow-sm">
+
+    <div class="card-header bg-danger text-white">
+        <h3>@ViewBag.Titulo</h3>
+    </div>
+
+    <div class="card-body">
+
+        <p>
+            Deseja realmente excluir o produto abaixo?
+        </p>
+
+        <hr />
+
+        <dl class="row">
+
+            <dt class="col-sm-3">
+                Nome
+            </dt>
+
+            <dd class="col-sm-9">
+                @Model.Nome
+            </dd>
+
+            <dt class="col-sm-3">
+                Categoria
+            </dt>
+
+            <dd class="col-sm-9">
+                @Model.NomeCategoria
+            </dd>
+
+            <dt class="col-sm-3">
+                Unidade
+            </dt>
+
+            <dd class="col-sm-9">
+                @Model.UnidadeMedida
+            </dd>
+
+            <dt class="col-sm-3">
+                Preço
+            </dt>
+
+            <dd class="col-sm-9">
+                @Model.Preco.ToString("C")
+            </dd>
+
+        </dl>
+
+        <form asp-action="ConfirmarExclusao"
+              method="post">
+
+            <input type="hidden"
+                   asp-for="Id" />
+
+            <button type="submit"
+                    class="btn btn-danger">
+                Confirmar Exclusão
+            </button>
+
+            <a asp-action="Index"
+               class="btn btn-secondary">
+                Cancelar
+            </a>
+
+        </form>
+
+    </div>
+
+</div>

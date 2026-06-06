@@ -1,10 +1,10 @@
-using ListaDeComprasWeb.Compartilhado;
 using ListaDeComprasWeb.ModuloCategoria.Aplicacao.Servicos;
 using ListaDeComprasWeb.ModuloCategoria.Dominio;
 using ListaDeComprasWeb.ModuloCategoria.Infraestrutura;
 using ListaDeComprasWeb.ModuloProduto.Dominio;
 using ListaDeComprasWeb.ModuloProduto.Infraestrutura;
 using ListaDeComprasWeb.ModuloProduto.Aplicacao.Servicos;
+using ListaDeComprasWeb.Compartilhado;
 
 var builder = WebApplication.CreateBuilder(args);
 
