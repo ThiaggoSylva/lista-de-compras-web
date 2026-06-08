@@ -42,12 +42,15 @@ public class RepositorioListaComprasEmArquivo
 
     public bool PossuiItens(Guid listaId)
     {
-        return false;
+        return contexto.Dados.ItensLista
+        .Any(x => x.ListaComprasId == listaId);
     }
 
     public int ObterTotalItens(Guid listaId)
     {
-        return 0;
+        return contexto.Dados.ItensLista
+        .Where(x => x.ListaComprasId == listaId)
+        .Sum(x => x.Quantidade);
     }
 
     public decimal ObterValorTotal(Guid listaId)
