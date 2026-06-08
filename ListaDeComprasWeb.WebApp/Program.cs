@@ -38,6 +38,12 @@ builder.Services
 
         options.ViewLocationFormats.Add(
             "/Compartilhado/Apresentacao/Views/{0}.cshtml");
+
+        options.ViewLocationFormats.Add(
+             "/ModuloItensListaCompras/Apresentacao/Views/{1}/{0}.cshtml");
+
+        options.ViewLocationFormats.Add(
+            "/ModuloItensListaCompras/Apresentacao/Views/{0}.cshtml");
     });
 
 #endregion
