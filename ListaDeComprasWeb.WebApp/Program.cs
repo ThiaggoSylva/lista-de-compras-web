@@ -8,6 +8,9 @@ using ListaDeComprasWeb.Compartilhado;
 using ListaDeComprasWeb.ModuloListaCompras.Dominio;
 using ListaDeComprasWeb.ModuloListaCompras.Infraestrutura;
 using ListaDeComprasWeb.ModuloListaCompras.Aplicacao.Servicos;
+using ListaDeComprasWeb.ModuloItemListaCompras.Dominio;
+using ListaDeComprasWeb.ModuloItemListaCompras.Infraestrutura;
+using ListaDeComprasWeb.ModuloItemListaCompras.Aplicacao.Servicos;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -60,14 +63,15 @@ builder.Services.AddScoped<IRepositorioProduto,
 builder.Services.AddScoped<IServicoProduto,
                            ServicoProduto>();
 
-builder.Services.AddScoped<
-    IRepositorioListaCompras,
-    RepositorioListaComprasEmArquivo>();
+builder.Services.AddScoped<IRepositorioListaCompras,
+                            RepositorioListaComprasEmArquivo>();
 
-builder.Services.AddScoped<
-    IServicoListaCompras,
-    ServicoListaCompras>();
+builder.Services.AddScoped<IRepositorioItemListaCompras,
+                            RepositorioItemListaComprasEmArquivo>();
 
+builder.Services.AddScoped<IServicoItemListaCompras,
+                            ServicoItemListaCompras>();
+                            
 #endregion
 
 var app = builder.Build();

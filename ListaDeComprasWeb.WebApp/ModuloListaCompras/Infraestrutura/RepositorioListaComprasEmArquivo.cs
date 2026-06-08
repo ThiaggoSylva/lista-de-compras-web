@@ -55,6 +55,27 @@ public class RepositorioListaComprasEmArquivo
 
     public decimal ObterValorTotal(Guid listaId)
     {
-        return 0;
+    var itens =
+        contexto.Dados.ItensLista
+            .Where(x => x.ListaComprasId == listaId);
+
+    decimal total = 0;
+
+    foreach (var item in itens)
+    {
+        var produto =
+            contexto.Dados.Produtos
+                .FirstOrDefault(x =>
+                    x.Id == item.ProdutoId);
+
+        if (produto is null)
+            continue;
+
+        total +=
+            produto.Preco *
+            item.Quantidade;
+    }
+
+    return total;
     }
 }
