@@ -47,7 +47,7 @@
 
             <th>Valor Estimado</th>
 
-            <th width="200">Ações</th>
+            <th width="320">Ações</th>
 
         </tr>
 
@@ -72,6 +72,12 @@
                 </td>
 
                 <td>
+                    <a asp-controller="ItemListaCompras"
+                        asp-action="Index"
+                        asp-route-listaId="@lista.Id"
+                        class="btn btn-info btn-sm">
+                        Itens
+                    </a>
 
                     <a asp-action="Editar"
                        asp-route-id="@lista.Id"
