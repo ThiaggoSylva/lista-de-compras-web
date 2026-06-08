@@ -50,6 +50,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = TW9kdWxvQ2F0ZWdvcmlhXEFwcmVzZW50YWNhb1xWaWV3c1xDYXRlZ29yaWFcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/thiag/Documents/Academia 2026/lista-de-compras-web/ListaDeComprasWeb.WebApp/ModuloItensListaCompras/Apresentacao/Views/ItemListaCompras/Cadastrar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = TW9kdWxvSXRlbnNMaXN0YUNvbXByYXNcQXByZXNlbnRhY2FvXFZpZXdzXEl0ZW1MaXN0YUNvbXByYXNcQ2FkYXN0cmFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thiag/Documents/Academia 2026/lista-de-compras-web/ListaDeComprasWeb.WebApp/ModuloItensListaCompras/Apresentacao/Views/ItemListaCompras/Excluir.cshtml]
+build_metadata.AdditionalFiles.TargetPath = TW9kdWxvSXRlbnNMaXN0YUNvbXByYXNcQXByZXNlbnRhY2FvXFZpZXdzXEl0ZW1MaXN0YUNvbXByYXNcRXhjbHVpci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thiag/Documents/Academia 2026/lista-de-compras-web/ListaDeComprasWeb.WebApp/ModuloItensListaCompras/Apresentacao/Views/ItemListaCompras/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = TW9kdWxvSXRlbnNMaXN0YUNvbXByYXNcQXByZXNlbnRhY2FvXFZpZXdzXEl0ZW1MaXN0YUNvbXByYXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thiag/Documents/Academia 2026/lista-de-compras-web/ListaDeComprasWeb.WebApp/ModuloItensListaCompras/Apresentacao/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = TW9kdWxvSXRlbnNMaXN0YUNvbXByYXNcQXByZXNlbnRhY2FvXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thiag/Documents/Academia 2026/lista-de-compras-web/ListaDeComprasWeb.WebApp/ModuloItensListaCompras/Apresentacao/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = TW9kdWxvSXRlbnNMaXN0YUNvbXByYXNcQXByZXNlbnRhY2FvXFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/thiag/Documents/Academia 2026/lista-de-compras-web/ListaDeComprasWeb.WebApp/ModuloListaCompras/Apresentacao/Views/Cadastrar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = TW9kdWxvTGlzdGFDb21wcmFzXEFwcmVzZW50YWNhb1xWaWV3c1xDYWRhc3RyYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

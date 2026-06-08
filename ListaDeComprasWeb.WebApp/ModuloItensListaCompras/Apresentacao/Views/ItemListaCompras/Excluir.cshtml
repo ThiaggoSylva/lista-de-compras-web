@@ -1,0 +1,45 @@
+@{
+    ViewBag.Titulo = "Excluir Item";
+}
+
+<div class="card border-danger">
+
+    <div class="card-header bg-danger text-white">
+
+        <h3>@ViewBag.Titulo</h3>
+
+    </div>
+
+    <div class="card-body">
+
+        <p>
+            Deseja realmente remover este item da lista?
+        </p>
+
+        <form asp-action="ConfirmarExclusao"
+              method="post">
+
+            <input type="hidden"
+                   name="id"
+                   value="@ViewBag.ItemId" />
+
+            <input type="hidden"
+                   name="listaId"
+                   value="@Context.Request.Query["listaId"]" />
+
+            <button type="submit"
+                    class="btn btn-danger">
+                Confirmar Exclusão
+            </button>
+
+            <a asp-action="Index"
+               asp-route-listaId="@Context.Request.Query["listaId"]"
+               class="btn btn-secondary">
+                Cancelar
+            </a>
+
+        </form>
+
+    </div>
+
+</div>
