@@ -8,9 +8,9 @@ using ListaDeComprasWeb.Compartilhado;
 using ListaDeComprasWeb.ModuloListaCompras.Dominio;
 using ListaDeComprasWeb.ModuloListaCompras.Infraestrutura;
 using ListaDeComprasWeb.ModuloListaCompras.Aplicacao.Servicos;
-using ListaDeComprasWeb.ModuloItemListaCompras.Dominio;
-using ListaDeComprasWeb.ModuloItemListaCompras.Infraestrutura;
-using ListaDeComprasWeb.ModuloItemListaCompras.Aplicacao.Servicos;
+using ListaDeComprasWeb.ModuloItensListaCompras.Dominio;
+using ListaDeComprasWeb.ModuloItensListaCompras.Infraestrutura;
+using ListaDeComprasWeb.ModuloItensListaCompras.Aplicacao.Servicos;
 
 var builder = WebApplication.CreateBuilder(args);
 

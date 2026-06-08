@@ -1,8 +1,8 @@
 using FluentResults;
 
-using ListaDeComprasWeb.ModuloItemListaCompras.Aplicacao.DTOs;
+using ListaDeComprasWeb.ModuloItensListaCompras.Aplicacao.DTOs;
 
-namespace ListaDeComprasWeb.ModuloItemListaCompras.Aplicacao.Servicos;
+namespace ListaDeComprasWeb.ModuloItensListaCompras.Aplicacao.Servicos;
 
 public interface IServicoItemListaCompras
 {

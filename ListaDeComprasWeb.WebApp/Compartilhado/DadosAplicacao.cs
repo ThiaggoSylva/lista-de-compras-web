@@ -1,7 +1,7 @@
 using ListaDeComprasWeb.ModuloCategoria.Dominio;
 using ListaDeComprasWeb.ModuloProduto.Dominio;
 using ListaDeComprasWeb.ModuloListaCompras.Dominio;
-using ListaDeComprasWeb.ModuloItemListaCompras.Dominio;
+using ListaDeComprasWeb.ModuloItensListaCompras.Dominio;
 
 namespace ListaDeComprasWeb.Compartilhado;
 

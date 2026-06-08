@@ -1,4 +1,4 @@
-namespace ListaDeComprasWeb.ModuloItemListaCompras.Aplicacao.DTOs;
+namespace ListaDeComprasWeb.ModuloItensListaCompras.Aplicacao.DTOs;
 
 public record ItemListaComprasDto(
     Guid Id,

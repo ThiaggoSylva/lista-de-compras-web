@@ -1,6 +1,6 @@
 using ListaDeComprasWeb.Compartilhado;
 
-namespace ListaDeComprasWeb.ModuloItemListaCompras.Dominio;
+namespace ListaDeComprasWeb.ModuloItensListaCompras.Dominio;
 
 public class ItemListaCompras
     : EntidadeBase<ItemListaCompras>

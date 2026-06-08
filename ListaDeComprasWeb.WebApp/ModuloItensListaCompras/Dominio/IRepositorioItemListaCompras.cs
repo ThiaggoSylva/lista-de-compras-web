@@ -1,4 +1,4 @@
-namespace ListaDeComprasWeb.ModuloItemListaCompras.Dominio;
+namespace ListaDeComprasWeb.ModuloItensListaCompras.Dominio;
 
 public interface IRepositorioItemListaCompras
     : IRepositorioBase<ItemListaCompras>

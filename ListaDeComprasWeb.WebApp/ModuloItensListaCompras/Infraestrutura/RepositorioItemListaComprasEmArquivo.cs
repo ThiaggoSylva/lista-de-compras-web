@@ -1,8 +1,8 @@
 using ListaDeComprasWeb.Compartilhado;
 using ListaDeComprasWeb.ModuloCategoria.Compartilhado;
-using ListaDeComprasWeb.ModuloItemListaCompras.Dominio;
+using ListaDeComprasWeb.ModuloItensListaCompras.Dominio;
 
-namespace ListaDeComprasWeb.ModuloItemListaCompras.Infraestrutura;
+namespace ListaDeComprasWeb.ModuloItensListaCompras.Infraestrutura;
 
 public class RepositorioItemListaComprasEmArquivo
     : RepositorioBaseEmArquivo<ItemListaCompras>,

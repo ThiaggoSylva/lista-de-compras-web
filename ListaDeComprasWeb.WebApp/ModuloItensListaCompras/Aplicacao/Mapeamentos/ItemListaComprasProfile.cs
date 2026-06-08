@@ -1,9 +1,9 @@
 using AutoMapper;
 
-using ListaDeComprasWeb.ModuloItemListaCompras.Aplicacao.DTOs;
-using ListaDeComprasWeb.ModuloItemListaCompras.Apresentacao.Models;
+using ListaDeComprasWeb.ModuloItensListaCompras.Aplicacao.DTOs;
+using ListaDeComprasWeb.ModuloItensListaCompras.Apresentacao.Models;
 
-namespace ListaDeComprasWeb.ModuloItemListaCompras.Aplicacao.Perfis;
+namespace ListaDeComprasWeb.ModuloItensListaCompras.Aplicacao.Perfis;
 
 public class ItemListaComprasProfile
     : Profile

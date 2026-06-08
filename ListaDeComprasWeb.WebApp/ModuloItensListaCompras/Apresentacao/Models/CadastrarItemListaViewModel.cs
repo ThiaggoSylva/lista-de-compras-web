@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace ListaDeComprasWeb.ModuloItemListaCompras.Apresentacao.Models;
+namespace ListaDeComprasWeb.ModuloItensListaCompras.Apresentacao.Models;
 
 public class CadastrarItemListaViewModel
 {

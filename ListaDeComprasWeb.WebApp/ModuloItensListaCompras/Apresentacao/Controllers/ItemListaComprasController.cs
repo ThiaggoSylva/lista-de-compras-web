@@ -5,14 +5,14 @@ using FluentResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-using ListaDeComprasWeb.ModuloItemListaCompras.Aplicacao.DTOs;
-using ListaDeComprasWeb.ModuloItemListaCompras.Aplicacao.Servicos;
-using ListaDeComprasWeb.ModuloItemListaCompras.Apresentacao.Models;
+using ListaDeComprasWeb.ModuloItensListaCompras.Aplicacao.DTOs;
+using ListaDeComprasWeb.ModuloItensListaCompras.Aplicacao.Servicos;
+using ListaDeComprasWeb.ModuloItensListaCompras.Apresentacao.Models;
 
 using ListaDeComprasWeb.ModuloListaCompras.Aplicacao.Servicos;
 using ListaDeComprasWeb.ModuloProduto.Aplicacao.Servicos;
 
-namespace ListaDeComprasWeb.ModuloItemListaCompras.Apresentacao.Controllers;
+namespace ListaDeComprasWeb.ModuloItensListaCompras.Apresentacao.Controllers;
 
 public class ItemListaComprasController : Controller
 {

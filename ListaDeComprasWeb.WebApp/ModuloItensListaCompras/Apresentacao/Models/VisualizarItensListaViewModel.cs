@@ -1,4 +1,4 @@
-namespace ListaDeComprasWeb.ModuloItemListaCompras.Apresentacao.Models;
+namespace ListaDeComprasWeb.ModuloItensListaCompras.Apresentacao.Models;
 
 public class VisualizarItensListaViewModel
 {

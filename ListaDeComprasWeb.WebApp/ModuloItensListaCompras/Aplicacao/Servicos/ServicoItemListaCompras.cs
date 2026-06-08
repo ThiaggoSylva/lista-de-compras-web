@@ -1,12 +1,12 @@
 using FluentResults;
 
-using ListaDeComprasWeb.ModuloItemListaCompras.Aplicacao.DTOs;
-using ListaDeComprasWeb.ModuloItemListaCompras.Dominio;
+using ListaDeComprasWeb.ModuloItensListaCompras.Aplicacao.DTOs;
+using ListaDeComprasWeb.ModuloItensListaCompras.Dominio;
 
 using ListaDeComprasWeb.ModuloProduto.Dominio;
 using ListaDeComprasWeb.ModuloCategoria.Dominio;
 
-namespace ListaDeComprasWeb.ModuloItemListaCompras.Aplicacao.Servicos;
+namespace ListaDeComprasWeb.ModuloItensListaCompras.Aplicacao.Servicos;
 
 public class ServicoItemListaCompras
     : IServicoItemListaCompras
