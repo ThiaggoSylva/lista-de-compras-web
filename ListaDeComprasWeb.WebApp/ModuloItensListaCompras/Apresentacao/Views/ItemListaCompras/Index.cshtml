@@ -42,6 +42,14 @@
 
     </div>
 
+    <div class="mt-2">
+
+    <strong>Total de Produtos:</strong>
+
+    @Model.Itens.Sum(x => x.Quantidade)
+
+    </div>
+
 </div>
 
 <table class="table table-striped table-hover">

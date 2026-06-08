@@ -66,56 +66,61 @@ public class ServicoListaCompras
 
     public Result Excluir(Guid id)
     {
-        ListaCompras? lista =
-            repositorio.SelecionarPorId(id);
+    ListaCompras? lista =
+        repositorio.SelecionarPorId(id);
 
-        if (lista is null)
-            return Result.Fail(
-                "Lista não encontrada.");
+    if (lista is null)
+        return Result.Fail(
+            "Lista não encontrada.");
 
-        if (repositorio.PossuiItens(id))
-            return Result.Fail(
-                "Não é possível excluir uma lista que possui itens.");
+    if (repositorio.PossuiItens(id))
+        return Result.Fail(
+            "Não é possível excluir listas com itens cadastrados.");
 
-        repositorio.Excluir(lista);
+    repositorio.Excluir(lista);
 
-        return Result.Ok();
+    return Result.Ok();
     }
 
-    public ListaComprasDto? SelecionarPorId(
-        Guid id)
+    public ListaComprasDto? SelecionarPorId(Guid id)
     {
-        ListaCompras? lista =
-            repositorio.SelecionarPorId(id);
+    ListaCompras? lista =
+        repositorio.SelecionarPorId(id);
 
-        if (lista is null)
-            return null;
+    if (lista is null)
+        return null;
 
-        return new ListaComprasDto(
-            lista.Id,
-            lista.Nome,
-            lista.DataCriacao,
-            lista.Status,
-            repositorio.ObterTotalItens(id),
-            repositorio.ObterValorTotal(id)
-        );
+    return new ListaComprasDto(
+        lista.Id,
+        lista.Nome,
+        lista.DataCriacao,
+        lista.Status,
+        repositorio.ObterTotalItens(lista.Id),
+        repositorio.ObterValorTotal(lista.Id)
+    );
     }
 
     public List<ListaComprasDto> SelecionarTodos()
     {
-        List<ListaCompras> listas =
-            repositorio.SelecionarTodos();
+    List<ListaCompras> listas =
+        repositorio.SelecionarTodos();
 
-        return listas
-            .Select(x =>
-                new ListaComprasDto(
-                    x.Id,
-                    x.Nome,
-                    x.DataCriacao,
-                    x.Status,
-                    repositorio.ObterTotalItens(x.Id),
-                    repositorio.ObterValorTotal(x.Id)
-                ))
-            .ToList();
+    List<ListaComprasDto> dtos = [];
+
+    foreach (var lista in listas)
+    {
+        dtos.Add(
+            new ListaComprasDto(
+                lista.Id,
+                lista.Nome,
+                lista.DataCriacao,
+                lista.Status,
+                repositorio.ObterTotalItens(lista.Id),
+                repositorio.ObterValorTotal(lista.Id)
+            )
+        );
+    }
+
+    return dtos;
     }
 }

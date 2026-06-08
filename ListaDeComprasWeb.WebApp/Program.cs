@@ -66,6 +66,9 @@ builder.Services.AddScoped<IServicoProduto,
 builder.Services.AddScoped<IRepositorioListaCompras,
                             RepositorioListaComprasEmArquivo>();
 
+builder.Services.AddScoped<IServicoListaCompras,
+                            ServicoListaCompras>();
+
 builder.Services.AddScoped<IRepositorioItemListaCompras,
                             RepositorioItemListaComprasEmArquivo>();
 
